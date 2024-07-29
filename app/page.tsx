@@ -1,9 +1,12 @@
 'use client'
 
 import Modal from '@/components/Modal'
+import Slider from '@/components/Slider'
 import { homeWork } from '@/constants'
 import { Link, Search } from 'lucide-react'
+import Image from 'next/image'
 import { useState } from 'react'
+import CountUp from 'react-countup'
 
 export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState<null | number>(null)
@@ -230,15 +233,95 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className=" flex justify-between container">
-          <div className="w-1/2 text-white space-y-4">
+        <div className="flex max-md:flex-col max-md:space-y-10 justify-between container">
+          <div className="md:w-1/2 text-white space-y-4">
             <h3 className="text-redd text-sm font-bold uppercase">
               NUMBER SPEAKS
             </h3>
-            <h1 className='text-[45px] font-bold leading-tight'>We have a lot of experience</h1>
-            <button style={{marginTop:'50px'}} title='Read More' className='font-semibold px-8 py-3 bg-redd'>Read More</button>
+            <h1 className="text-[45px] font-bold leading-tight">
+              We have a lot of experience
+            </h1>
+            <button
+              style={{ marginTop: '50px' }}
+              title="Read More"
+              className="font-semibold px-8 py-3 bg-redd"
+            >
+              Read More
+            </button>
           </div>
-          <div className="w-1/2"></div>
+          <div className="md:w-1/2 space-y-5">
+            <div className="flex gap-10">
+              <CountUp
+                className="text-redd text-5xl font-bold"
+                start={0}
+                end={2034}
+                duration={2.7}
+                separator=""
+              />
+              <div className="space-y-4">
+                <h2 className="text-white text-[22px] font-bold">
+                  Successful projects
+                </h2>
+                <p className="text-base text-[#b3b3b3] font-normal">
+                  Since its establishment in 2005, Fashion has been focusing on
+                  project management & implementation through cooperation.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-10">
+              <CountUp
+                className="text-redd text-5xl font-bold"
+                start={0}
+                end={1054}
+                duration={2.7}
+                separator=""
+              />
+              <div className="space-y-4">
+                <h2 className="text-white text-[22px] font-bold">Events</h2>
+                <p className="text-base text-[#b3b3b3] font-normal">
+                  Since its establishment in 2005, Fashion has been focusing on
+                  project management & implementation through cooperation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* slider */}
+        <Slider />
+
+        <div className="relative flex items-center justify-center bg-pink-500 text-white">
+          <Image
+            src={'/bgImg.jpg'}
+            alt="Background"
+            layout="fill"
+            objectFit="cover"
+            className="absolute inset-0 z-0"
+          />
+          <div className="relative right-0 left-0 w-full py-28 z-10 p-4 bg-pink-600 bg-opacity-85 text-center">
+            <h1 className="text-4xl font-bold mb-4">
+              We Create Trends For The World
+            </h1>
+            <p className="mb-4">
+              Donec faucibus consequat ante. Mauris eget mi sed ex efficitur
+              porta id non quam. Cras aliquam turpis tellus, quis laoreet lacus{' '}
+              <br />
+              congue sed. Nullam at est quis urna vestibulum interdum. Praesent
+              auctor leo ut massa ultrices tempor.
+            </p>
+            <button className="px-4 py-2 bg-white text-pink-600  font-bold cursor-pointer">
+              Work With Us
+            </button>
+          </div>
+        </div>
+
+        {/* our team */}
+        <div className="container text-center py-20">
+          <span className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
+          <p className='text-[45px] text-white font-bold'>Top Designers</p>
+          <ul className='grid grid-cols-3 gap-5'>
+            
+          </ul>
         </div>
       </div>
 

@@ -2,8 +2,8 @@
 
 import Modal from '@/components/Modal'
 import Slider from '@/components/Slider'
-import { homeWork } from '@/constants'
-import { Link, Search } from 'lucide-react'
+import { homeWork, ourTeam } from '@/constants'
+import { Facebook, Instagram, Link, Search, Twitter, Youtube } from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
 import CountUp from 'react-countup'
@@ -17,6 +17,7 @@ export default function Home() {
     'rasm1' | 'rasm2' | 'rasm3' | 'rasm4' | null
   >(null)
   const [modal, setModal] = useState(false)
+  const [team, setTeam] = useState<number | null>(null)
 
   return (
     <div>
@@ -320,7 +321,30 @@ export default function Home() {
           <span className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
           <p className='text-[45px] text-white font-bold'>Top Designers</p>
           <ul className='grid grid-cols-3 gap-5'>
-            
+            {ourTeam.map((item, index) => (
+              <li onMouseEnter={() => setTeam(index)} onMouseLeave={() => setTeam(null)} className='text-white relative transition-all duration-300' key={index}>
+               <img className='' src={item.img} alt="" />
+               <div className={`space-y-8 text-center absolute top-5 left-5 bottom-5 right-5 ${team === index ? 'opacity-100' : 'opacity-0'} transition-all duration-300 py-16 px-5 bg-[#191919]`}>
+                  <p className='text-[#b3b3b3] font-normal text-base'>{item.desc}</p>
+                  <h2 className='text-[22px] font-bold '>{item.name}</h2>
+                  <p className='text-redd text-xs'>{item.position}</p>
+                  <div className='flex items-center gap-3 justify-center'>
+                     <span className='p-4 rounded-full bg-[#303030] cursor-pointer'>
+                      <Facebook/>
+                     </span>
+                     <span className='p-4 rounded-full bg-[#303030] cursor-pointer'>
+                      <Twitter/>
+                     </span>
+                     <span className='p-4 rounded-full bg-[#303030] cursor-pointer'>
+                      <Instagram/>
+                     </span>
+                     <span className='p-4 rounded-full bg-[#303030] cursor-pointer'>
+                      <Youtube/>
+                     </span>
+                  </div>
+               </div>
+              </li>
+            ))}
           </ul>
         </div>
       </div>

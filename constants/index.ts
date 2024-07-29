@@ -38,3 +38,24 @@ export const homeWork = [
     desc: 'Делаю отличные промо-ролики с озвучкой популярных исполнителей и медийных личностей интернета.',
   },
 ]
+
+export const ourTeam = [
+  {
+    img: '/team1.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER'
+  },
+  {
+    img: '/team2.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER'
+  },
+  {
+    img: '/team3.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER'
+  },
+]

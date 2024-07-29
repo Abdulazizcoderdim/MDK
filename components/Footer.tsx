@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
         <div className="space-y-3 text-[#b3b3b3]">
           <h2 className="text-xl font-bold text-white">Instagram</h2>
-          <div className='grid grid-cols-3 gap-2'>
+          <div className="grid grid-cols-3 gap-2">
             <img src="/i1.jpg" alt="" />
             <img src="/i2.jpg" alt="" />
             <img src="/i3.jpg" alt="" />
@@ -57,6 +57,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <p className="flex justify-center mt-10 text-[#b3b3b3]">
+      Copyright ©{new Date().getFullYear()} All rights reserved | This template is made with  by Colorlib
+      </p>
     </div>
   )
 }

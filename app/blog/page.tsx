@@ -1,5 +1,11 @@
+import LinkPage from '@/components/LinkPage'
+
 const BlogPage = () => {
-  return <div>BlogPage</div>
+  return (
+    <div>
+      Blog
+    </div>
+  )
 }
 
 export default BlogPage

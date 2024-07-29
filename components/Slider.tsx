@@ -31,8 +31,8 @@ const Slider = () => {
         onSlideChange={() => console.log('slide change')}
       >
         <SwiperSlide>
-          <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex w-full gap-5 items-center">
-            <img src="/t1.jpg" className="rounded-full" alt="" />
+          <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex max-md:flex-col w-full gap-5 items-center">
+            <img src="/t1.jpg" className="rounded-full max-md:w-20" alt="" />
             <div className="space-y-2">
               <h2 className="text-[22px] text-white font-bold">
                 Travis Crawford
@@ -46,8 +46,8 @@ const Slider = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex w-full gap-5 items-center">
-            <img src="/t2.jpg" className="rounded-full" alt="" />
+          <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] max-md:flex-col flex w-full gap-5 items-center">
+            <img src="/t2.jpg" className="rounded-full max-md:w-20" alt="" />
             <div className="space-y-2">
               <h2 className="text-[22px] text-white font-bold">
                 Travis Crawford
@@ -61,7 +61,7 @@ const Slider = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex w-full gap-5 items-center">
+          <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] max-md:flex-col flex w-full gap-5 items-center">
             <img src="/t3.jpg" className="rounded-full" alt="" />
             <div className="space-y-2">
               <h2 className="text-[22px] text-white font-bold">
@@ -76,7 +76,7 @@ const Slider = () => {
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex w-full gap-5 items-center">
+          <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] max-md:flex-col flex w-full gap-5 items-center">
             <img src="/t4.jpg" className="rounded-full" alt="" />
             <div className="space-y-2">
               <h2 className="text-[22px] text-white font-bold">

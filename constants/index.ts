@@ -97,3 +97,50 @@ export const ourTeamAbout = [
     position: 'DESIGNER',
   },
 ]
+
+export const videos = [
+  {
+    src: 'https://mdk.pw/img/port/Comp%20113.mp4',
+    category: 'FASHION',
+  },
+  {
+    src: 'https://mdk.pw/img/port/photo_2024-02-12_21-32-55.mp4',
+    category: 'MODEL',
+  },
+  {
+    src: 'https://mdk.pw/img/port/photo_2023-06-26_10-05-39.mp4',
+    category: 'MODEL',
+  },
+  {
+    src: 'https://mdk.pw/img/port/jerry.mp4',
+    category: 'EVENT',
+  },
+  {
+    src: 'https://mdk.pw/img/port/Comp%201_1.mp4',
+    category: 'OTHER',
+  },
+  {
+    src: 'https://mdk.pw/img/port/ae.mp4',
+    category: 'EVENT',
+  },
+  {
+    src: 'https://mdk.pw/img/port/Comp%2012222_2.mp4',
+    category: 'EVENT',
+  },
+  {
+    src: 'https://mdk.pw/img/port/alkatras.mp4',
+    category: 'FASHION',
+  },
+  {
+    src: 'https://mdk.pw/img/port/Comp%201%20volumetric.mp4',
+    category: 'FASHION',
+  },
+  {
+    src: 'https://mdk.pw/img/port/Comp%201.mp4',
+    category: 'FASHION',
+  },
+  {
+    src: 'https://mdk.pw/img/port/Comp%201.mp4',
+    category: 'OTHER',
+  },
+]

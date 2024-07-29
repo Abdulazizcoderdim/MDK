@@ -23,14 +23,15 @@ const Header = () => {
             {navItems.map((item, index) => {
               const isActive = item.href === pathname
               return (
-                <li
+                <FlyoutLink
+                  FlyoutContent={index === 3 && <PricingContent />}
                   className={`hover:text-[#E32879] transition ${
                     isActive && 'text-[#E32879]'
                   }`}
                   key={index}
                 >
                   <Link href={item.href}>{item.title}</Link>
-                </li>
+                </FlyoutLink>
               )
             })}
           </ul>
@@ -54,7 +55,7 @@ const Header = () => {
               <Link href={'/blog'}>Blog</Link>
             </li>
             <li>
-              <Link className='flex items-center' href={'/gallery'}>
+              <Link className="flex items-center" href={'/gallery'}>
                 Gallery <ChevronRight width={20} height={20} />
               </Link>
             </li>
@@ -84,6 +85,52 @@ const Header = () => {
         </div>
       )}
     </>
+  )
+}
+
+interface FlyoutLinkProps {
+  children: React.ReactNode
+  FlyoutContent: React.ReactNode
+  className?: string
+}
+
+const FlyoutLink = ({ children, FlyoutContent }: FlyoutLinkProps) => {
+  const [open, setOpen] = useState(false)
+
+  const showFlyout = open && FlyoutContent
+  return (
+    <div
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+      className="relative h-fit w-fit"
+    >
+      {children}
+      {showFlyout && (
+        <div className="absolute rounded-lg left-0 top-12 bg-white text-black">
+          <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
+          {FlyoutContent}
+        </div>
+      )}
+    </div>
+  )
+}
+
+const PricingContent = () => {
+  return (
+    <ul className="w-48 min-h-24 bg-slate-50 text-black font-bold text-lg space-y-3 p-6 shadow hover:shadow-lg transition duration-200 ">
+      <li className="hover:text-redd transition-all duration-200" >
+        <Link href={'#'}>Naoh</Link>
+      </li>
+      <li className="hover:text-redd transition-all duration-200" >
+        <Link href={'#'}>Padis</Link>
+      </li>
+      <li className="hover:text-redd transition-all duration-200" >
+        <Link href={'#'}>Jacob</Link>
+      </li>
+      <li className="hover:text-redd transition-all duration-200" >
+        <Link href={'#'}>Gomez</Link>
+      </li>
+    </ul>
   )
 }
 

@@ -3,7 +3,14 @@
 import Modal from '@/components/Modal'
 import Slider from '@/components/Slider'
 import { homeWork, ourTeam } from '@/constants'
-import { Facebook, Instagram, Link, Search, Twitter, Youtube } from 'lucide-react'
+import {
+  Facebook,
+  Instagram,
+  Link,
+  Search,
+  Twitter,
+  Youtube,
+} from 'lucide-react'
 import Image from 'next/image'
 import { useState } from 'react'
 import CountUp from 'react-countup'
@@ -39,7 +46,7 @@ export default function Home() {
           <div>
             {/* 1-chi */}
             <div className="md:flex flex-row justify-between md:space-x-10 max-md:space-y-10 items-center">
-              <img className="md:w-1/2 rounded-lg" src="/home.png" alt="" />
+              <Image className="md:w-1/2 rounded-lg" src="/home.png" alt="" />
               <div className="flex md:w-1/2 flex-col space-y-3">
                 <h1 className="text-sm font-bold uppercase text-[#e32879]">
                   FAQ
@@ -81,7 +88,7 @@ export default function Home() {
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                   >
-                    <img src={item.icon} alt="" className="mx-auto" />
+                    <Image src={item.icon} alt="" className="mx-auto" />
                     <p className="text-[22px] font-bold">{item.title}</p>
                     <p className="text-sm text-[#b3b3b3] font-normal">
                       {item.desc}
@@ -113,7 +120,7 @@ export default function Home() {
               onMouseLeave={() => setPhotoHover(null)}
               className="w-1/2 max-md:w-full relative"
             >
-              <img
+              <Image
                 className="h-full w-full object-cover"
                 src="/w1.png"
                 alt=""
@@ -144,7 +151,7 @@ export default function Home() {
                 onMouseLeave={() => setPhotoHover(null)}
                 className="md:h-1/2 relative"
               >
-                <img
+                <Image
                   className="h-full w-full object-cover"
                   src="/w2.png"
                   alt=""
@@ -175,7 +182,7 @@ export default function Home() {
                   onMouseLeave={() => setPhotoHover(null)}
                   className="w-1/2 max-md:w-full relative"
                 >
-                  <img
+                  <Image
                     className="object-cover h-full w-full"
                     src="w3.png"
                     alt=""
@@ -205,7 +212,7 @@ export default function Home() {
                   onMouseLeave={() => setPhotoHover(null)}
                   className="w-1/2 max-md:w-full relative"
                 >
-                  <img
+                  <Image
                     className="object-cover h-full w-full"
                     src="w4.png"
                     alt=""
@@ -293,7 +300,7 @@ export default function Home() {
 
         <div className="relative flex items-center justify-center bg-pink-500 text-white">
           <Image
-            src={'/bgImg.jpg'}
+            src={'/bgImage.jpg'}
             alt="Background"
             layout="fill"
             objectFit="cover"
@@ -319,35 +326,48 @@ export default function Home() {
         {/* our team */}
         <div className="container text-center py-20">
           <span className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
-          <p className='text-[45px] text-white font-bold'>Top Designers</p>
-          <ul className='grid grid-cols-3 gap-5'>
+          <p className="text-[45px] text-white font-bold">Top Designers</p>
+          <ul className="grid grid-cols-3 gap-5">
             {ourTeam.map((item, index) => (
-              <li onMouseEnter={() => setTeam(index)} onMouseLeave={() => setTeam(null)} className='text-white relative transition-all duration-300' key={index}>
-               <img className='' src={item.img} alt="" />
-               <div className={`space-y-8 text-center absolute top-5 left-5 bottom-5 right-5 ${team === index ? 'opacity-100' : 'opacity-0'} transition-all duration-300 py-16 px-5 bg-[#191919]`}>
-                  <p className='text-[#b3b3b3] font-normal text-base'>{item.desc}</p>
-                  <h2 className='text-[22px] font-bold '>{item.name}</h2>
-                  <p className='text-redd text-xs'>{item.position}</p>
-                  <div className='flex items-center gap-3 justify-center'>
-                     <span className='p-4 rounded-full bg-[#303030] cursor-pointer'>
-                      <Facebook/>
-                     </span>
-                     <span className='p-4 rounded-full bg-[#303030] cursor-pointer'>
-                      <Twitter/>
-                     </span>
-                     <span className='p-4 rounded-full bg-[#303030] cursor-pointer'>
-                      <Instagram/>
-                     </span>
-                     <span className='p-4 rounded-full bg-[#303030] cursor-pointer'>
-                      <Youtube/>
-                     </span>
+              <li
+                onMouseEnter={() => setTeam(index)}
+                onMouseLeave={() => setTeam(null)}
+                className="text-white relative transition-all duration-300"
+                key={index}
+              >
+                <Image className="" src={item.img} alt="" />
+                <div
+                  className={`space-y-8 text-center absolute top-5 left-5 bottom-5 right-5 ${
+                    team === index ? 'opacity-100' : 'opacity-0'
+                  } transition-all duration-300 py-16 px-5 bg-[#191919]`}
+                >
+                  <p className="text-[#b3b3b3] font-normal text-base">
+                    {item.desc}
+                  </p>
+                  <h2 className="text-[22px] font-bold ">{item.name}</h2>
+                  <p className="text-redd text-xs">{item.position}</p>
+                  <div className="flex items-center gap-3 justify-center">
+                    <span className="p-4 rounded-full bg-[#303030] cursor-pointer">
+                      <Facebook />
+                    </span>
+                    <span className="p-4 rounded-full bg-[#303030] cursor-pointer">
+                      <Twitter />
+                    </span>
+                    <span className="p-4 rounded-full bg-[#303030] cursor-pointer">
+                      <Instagram />
+                    </span>
+                    <span className="p-4 rounded-full bg-[#303030] cursor-pointer">
+                      <Youtube />
+                    </span>
                   </div>
-               </div>
+                </div>
               </li>
             ))}
           </ul>
         </div>
       </div>
+
+      <div className="bg-[]"></div>
 
       {/* modal */}
 

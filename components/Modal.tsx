@@ -1,6 +1,7 @@
 'use client'
 
 import { X } from 'lucide-react'
+import Image from 'next/image'
 import { Dispatch, SetStateAction, useRef } from 'react'
 
 type ModalProps = {
@@ -34,7 +35,7 @@ const Modal = ({
             className="origin-right cursor-pointer"
           />
         </p>
-        <img
+        <Image
           width={
             modalSearch === 'rasm3' ? 500 : modalSearch === 'rasm4' ? 500 : 1000
           }

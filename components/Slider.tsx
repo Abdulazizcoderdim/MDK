@@ -13,7 +13,7 @@ const Slider = () => {
   return (
     <div className="container py-10">
       <Swiper
-        className="h-80"
+        className="min-h-80"
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={35}

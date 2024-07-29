@@ -1,11 +1,18 @@
 'use client'
 
+import Modal from '@/components/Modal'
 import { homeWork } from '@/constants'
 import { Link, Search } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Home() {
   const [hoveredIndex, setHoveredIndex] = useState<null | number>(null)
+  const [photoHover, setPhotoHover] = useState<
+    'rasm1' | 'rasm2' | 'rasm3' | 'rasm4' | null
+  >(null)
+  const [modalSearch, setModalSearch] = useState<
+  'rasm1' | 'rasm2' | 'rasm3' | 'rasm4' | null
+>(null)
 
   return (
     <div>
@@ -21,6 +28,7 @@ export default function Home() {
           <source src="/finish.mp4" type="video/mp4" />
         </video>
       </div>
+
       <div className="bg-[#191919]">
         <div className="container py-24">
           <div>
@@ -91,36 +99,121 @@ export default function Home() {
           </h1>
         </div>
       </div>
+
       <div className="bg-[#191919]">
         <div className="container">
-          <div className="flex text-white">
-            <div className="w-1/2 relative">
+          <div className="flex text-white -translate-y-36">
+            <div
+              onMouseEnter={() => setPhotoHover('rasm1')}
+              onMouseLeave={() => setPhotoHover(null)}
+              className="w-1/2 relative"
+            >
               <img
                 className="h-full w-full object-cover"
                 src="/w1.png"
                 alt=""
               />
-              <div className="absolute left-1/2 right-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-                <div className='flex items-center gap-4'>
-                  <span className='p-5 rounded-full bg-red-400'>
+              <div
+                className={`absolute inset-0 transition-all duration-500 items-center justify-center ${
+                  photoHover === 'rasm1' ? 'flex' : 'opacity-0 flex'
+                }`}
+              >
+                <div className="flex items-center gap-4">
+                  <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                     <Link />
                   </span>
-                  <span className='p-5 rounded-full bg-red-400'>
+                  <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                     <Search />
                   </span>
                 </div>
               </div>
             </div>
             <div className="flex w-1/2 flex-col h-full">
-              <img className="h-1/2 object-cover" src="/w2.png" alt="" />
+              <div
+                onMouseEnter={() => setPhotoHover('rasm2')}
+                onMouseLeave={() => setPhotoHover(null)}
+                className="h-1/2 relative"
+              >
+                <img
+                  className="h-full w-full object-cover"
+                  src="/w2.png"
+                  alt=""
+                />
+                <div
+                  className={`absolute inset-0 flex transition-all duration-500 items-center justify-center ${
+                    photoHover === 'rasm2' ? 'flex' : 'opacity-0 flex'
+                  }`}
+                >
+                  <div className="flex items-center gap-4">
+                    <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                      <Link />
+                    </span>
+                    <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                      <Search />
+                    </span>
+                  </div>
+                </div>
+              </div>
               <div className="flex h-1/2">
-                <img className="w-1/2 object-cover" src="w3.png" alt="" />
-                <img className="w-1/2 object-cover" src="w4.png" alt="" />
+                <div
+                  onMouseEnter={() => setPhotoHover('rasm3')}
+                  onMouseLeave={() => setPhotoHover(null)}
+                  className="w-1/2 relative"
+                >
+                  <img
+                    className="object-cover h-full w-full"
+                    src="w3.png"
+                    alt=""
+                  />
+                  <div
+                    className={`absolute inset-0 transition-all duration-500 flex items-center justify-center ${
+                      photoHover === 'rasm3' ? 'flex' : 'opacity-0 flex'
+                    }`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                        <Link />
+                      </span>
+                      <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                        <Search />
+                      </span>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  onMouseEnter={() => setPhotoHover('rasm4')}
+                  onMouseLeave={() => setPhotoHover(null)}
+                  className="w-1/2 relative"
+                >
+                  <img
+                    className="object-cover h-full w-full"
+                    src="w4.png"
+                    alt=""
+                  />
+                  <div
+                    className={`absolute inset-0 transition-all duration-500 items-center justify-center ${
+                      photoHover === 'rasm4' ? 'flex' : 'opacity-0 flex'
+                    }`}
+                  >
+                    <div className="flex items-center gap-4">
+                      <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                        <Link />
+                      </span>
+                      <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                        <Search />
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* modal */}
+
+      <Modal setModalSearch={setModalSearch} />
     </div>
   )
 }

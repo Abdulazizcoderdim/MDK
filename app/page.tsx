@@ -245,7 +245,7 @@ export default function Home() {
             <h3 className="text-redd text-sm font-bold uppercase">
               NUMBER SPEAKS
             </h3>
-            <h1 className="text-[45px] font-bold leading-tight">
+            <h1 className="md:text-[45px] text-[35px] font-bold leading-tight">
               We have a lot of experience
             </h1>
             <button
@@ -259,7 +259,7 @@ export default function Home() {
           <div className="md:w-1/2 space-y-5">
             <div className="flex gap-10">
               <CountUp
-                className="text-redd text-5xl font-bold"
+                className="text-redd md:text-5xl text-2xl font-bold"
                 start={0}
                 end={2034}
                 duration={2.7}
@@ -277,7 +277,7 @@ export default function Home() {
             </div>
             <div className="flex gap-10">
               <CountUp
-                className="text-redd text-5xl font-bold"
+                className="text-redd md:text-5xl text-2xl font-bold"
                 start={0}
                 end={1054}
                 duration={2.7}

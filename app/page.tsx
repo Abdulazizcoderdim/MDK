@@ -46,7 +46,7 @@ export default function Home() {
           <div>
             {/* 1-chi */}
             <div className="md:flex flex-row justify-between md:space-x-10 max-md:space-y-10 items-center">
-              <Image className="md:w-1/2 rounded-lg" src="/home.png" alt="" />
+              <Image width={500} height={100} className="md:w-1/2 rounded-lg" src="/home.png" alt="" />
               <div className="flex md:w-1/2 flex-col space-y-3">
                 <h1 className="text-sm font-bold uppercase text-[#e32879]">
                   FAQ

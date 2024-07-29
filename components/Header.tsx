@@ -16,7 +16,7 @@ const Header = () => {
         <div className="flex py-7 container justify-between items-center ">
           <h1>
             <Link href={'/'}>
-              <Image src="/logo.png" alt="" />
+              <Image src="/logo.png" alt="" width={200} height={100} />
             </Link>
           </h1>
           <ul className="md:flex hidden items-center gap-8 font-bold text-white">

@@ -105,7 +105,7 @@ export default function Home() {
           <p className="text-[#e32879] text-sm uppercase font-bold">
             МОЁ ПОРТФОЛИО
           </p>
-          <h1 className="text-[45px] font-bold text-white">
+          <h1 className="md:text-[45px] text-[35px] font-bold text-white">
             3D и 2D оформления тем/баннеров/аватарок/статей
           </h1>
         </div>
@@ -336,7 +336,7 @@ export default function Home() {
                 <div
                   className={`md:space-y-8 space-y-2 text-center absolute top-5 left-5 bottom-5 right-5 ${
                     team === index ? 'opacity-100' : 'opacity-0'
-                  } transition-all duration-300 py-16 px-5 bg-[#191919]`}
+                  } transition-all duration-300 md:py-16 py-5 px-5 bg-[#191919]`}
                 >
                   <p className="text-[#b3b3b3] font-normal text-base">
                     {item.desc}
@@ -344,16 +344,16 @@ export default function Home() {
                   <h2 className="text-[22px] font-bold ">{item.name}</h2>
                   <p className="text-redd text-xs">{item.position}</p>
                   <div className="flex items-center gap-3 justify-center">
-                    <span className="p-4 rounded-full bg-[#303030] cursor-pointer">
+                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
                       <Facebook />
                     </span>
-                    <span className="p-4 rounded-full bg-[#303030] cursor-pointer">
+                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
                       <Twitter />
                     </span>
-                    <span className="p-4 rounded-full bg-[#303030] cursor-pointer">
+                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
                       <Instagram />
                     </span>
-                    <span className="p-4 rounded-full bg-[#303030] cursor-pointer">
+                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
                       <Youtube />
                     </span>
                   </div>

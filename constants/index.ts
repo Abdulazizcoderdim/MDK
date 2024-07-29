@@ -44,18 +44,56 @@ export const ourTeam = [
     img: '/team1.png',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
-    position: 'DESIGNER'
+    position: 'DESIGNER',
   },
   {
     img: '/team2.png',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
-    position: 'DESIGNER'
+    position: 'DESIGNER',
   },
   {
     img: '/team3.png',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
-    position: 'DESIGNER'
+    position: 'DESIGNER',
+  },
+]
+export const ourTeamAbout = [
+  {
+    img: '/team1.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER',
+  },
+  {
+    img: '/team2.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER',
+  },
+  {
+    img: '/team3.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER',
+  },
+  {
+    img: '/team1.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER',
+  },
+  {
+    img: '/team2.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER',
+  },
+  {
+    img: '/team3.png',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER',
   },
 ]

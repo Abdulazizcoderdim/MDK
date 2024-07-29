@@ -11,7 +11,7 @@ const BlogPage = () => {
           <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
             <BlogPlace />
             <BlogPlace />
-            <div className="flex flex-col justify-between bg-redd w-full h-full p-20 text-white">
+            <div className="flex flex-col justify-between bg-redd  h-full p-20 text-white">
               <p className="text-white flex items-center gap-1">
                 <Calendar width={15} height={15} /> August 9, 2019{' '}
                 <Mails width={15} height={15} /> 0
@@ -20,7 +20,7 @@ const BlogPage = () => {
                 Every Single Way You Can Wear Pastel Makeup This Spring
               </h1>
               <p className="text-base text-[#b3b3b3]">
-                Never ever think of giving up. Winners never quit and
+                Never ever think of giving up. Winners never quit <br /> and
               </p>
               <div className="flex gap-2 items-center">
                 <img src="/a1.jpg" className="rounded-full" alt="" />

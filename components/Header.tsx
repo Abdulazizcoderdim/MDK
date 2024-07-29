@@ -1,6 +1,7 @@
 'use client'
 
 import { navItems } from '@/constants'
+import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 
@@ -14,7 +15,7 @@ const Header = () => {
           <img src="/logo.png" alt="" />
         </Link>
       </h1>
-      <ul className="flex items-center gap-8 font-bold text-white">
+      <ul className="md:flex hidden items-center gap-8 font-bold text-white">
         {navItems.map((item, index) => {
           const isActive = item.href === pathname
           return (
@@ -29,6 +30,10 @@ const Header = () => {
           )
         })}
       </ul>
+      {/* mobile */}
+      <div className="md:hidden bg-[#606060] text-white font-bold gap-2 cursor-pointer flex items-center p-3 py-1">
+        MENU <Menu />
+      </div>
     </div>
   )
 }

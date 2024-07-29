@@ -48,7 +48,7 @@ const Header = () => {
               <Link href={'/'}>Главная</Link>
             </li>
             <li>
-              <Link href={'/faq'}>FAQ</Link>
+              <Link href={'/about'}>About Us</Link>
             </li>
             <li>
               <Link href={'/blog'}>Blog</Link>

@@ -2,7 +2,6 @@
 
 import Modal from '@/components/Modal'
 import { homeWork } from '@/constants'
-import { useModalSrc } from '@/hooks'
 import { Link, Search } from 'lucide-react'
 import { useState } from 'react'
 
@@ -104,11 +103,11 @@ export default function Home() {
 
       <div className="bg-[#191919]">
         <div className="container">
-          <div className="flex text-white -translate-y-36">
+          <div className="flex max-md:flex-col text-white -translate-y-36">
             <div
               onMouseEnter={() => setPhotoHover('rasm1')}
               onMouseLeave={() => setPhotoHover(null)}
-              className="w-1/2 relative"
+              className="w-1/2 max-md:w-full relative"
             >
               <img
                 className="h-full w-full object-cover"
@@ -124,17 +123,22 @@ export default function Home() {
                   <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                     <Link />
                   </span>
-                  <span onClick={() => {setModalSearch('rasm1'), setModal(true)}} className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                  <span
+                    onClick={() => {
+                      setModalSearch('rasm1'), setModal(true)
+                    }}
+                    className="p-5 rounded-full bg-[#e32879] cursor-pointer"
+                  >
                     <Search />
                   </span>
                 </div>
               </div>
             </div>
-            <div className="flex w-1/2 flex-col h-full">
+            <div className="flex w-1/2 max-md:w-full flex-col h-full">
               <div
                 onMouseEnter={() => setPhotoHover('rasm2')}
                 onMouseLeave={() => setPhotoHover(null)}
-                className="h-1/2 relative"
+                className="md:h-1/2 relative"
               >
                 <img
                   className="h-full w-full object-cover"
@@ -150,17 +154,22 @@ export default function Home() {
                     <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                       <Link />
                     </span>
-                    <span onClick={() => {setModalSearch('rasm2'), setModal(true)}} className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                    <span
+                      onClick={() => {
+                        setModalSearch('rasm2'), setModal(true)
+                      }}
+                      className="p-5 rounded-full bg-[#e32879] cursor-pointer"
+                    >
                       <Search />
                     </span>
                   </div>
                 </div>
               </div>
-              <div className="flex h-1/2">
+              <div className="flex max-md:flex-col h-1/2">
                 <div
                   onMouseEnter={() => setPhotoHover('rasm3')}
                   onMouseLeave={() => setPhotoHover(null)}
-                  className="w-1/2 relative"
+                  className="w-1/2 max-md:w-full relative"
                 >
                   <img
                     className="object-cover h-full w-full"
@@ -176,7 +185,12 @@ export default function Home() {
                       <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                         <Link />
                       </span>
-                      <span onClick={() => {setModalSearch('rasm3'), setModal(true)}} className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                      <span
+                        onClick={() => {
+                          setModalSearch('rasm3'), setModal(true)
+                        }}
+                        className="p-5 rounded-full bg-[#e32879] cursor-pointer"
+                      >
                         <Search />
                       </span>
                     </div>
@@ -185,7 +199,7 @@ export default function Home() {
                 <div
                   onMouseEnter={() => setPhotoHover('rasm4')}
                   onMouseLeave={() => setPhotoHover(null)}
-                  className="w-1/2 relative"
+                  className="w-1/2 max-md:w-full relative"
                 >
                   <img
                     className="object-cover h-full w-full"
@@ -201,7 +215,12 @@ export default function Home() {
                       <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                         <Link />
                       </span>
-                      <span onClick={() => {setModalSearch('rasm4'), setModal(true)}} className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                      <span
+                        onClick={() => {
+                          setModalSearch('rasm4'), setModal(true)
+                        }}
+                        className="p-5 rounded-full bg-[#e32879] cursor-pointer"
+                      >
                         <Search />
                       </span>
                     </div>
@@ -211,12 +230,26 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className=" flex justify-between container">
+          <div className="w-1/2 text-white space-y-4">
+            <h3 className="text-redd text-sm font-bold uppercase">
+              NUMBER SPEAKS
+            </h3>
+            <h1 className='text-[45px] font-bold leading-tight'>We have a lot of experience</h1>
+            <button style={{marginTop:'50px'}} title='Read More' className='font-semibold px-8 py-3 bg-redd'>Read More</button>
+          </div>
+          <div className="w-1/2"></div>
+        </div>
       </div>
 
       {/* modal */}
 
       {modal && (
-        <Modal modalSearch={modalSearch} setModal={setModal} setModalSearch={setModalSearch} />
+        <Modal
+          modalSearch={modalSearch}
+          setModal={setModal}
+          setModalSearch={setModalSearch}
+        />
       )}
     </div>
   )

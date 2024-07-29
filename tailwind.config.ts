@@ -22,6 +22,9 @@ const config: Config = {
           xl: '5rem',
           '2xl': '13rem',
         }
+      },
+      colors: {
+        'redd': '#e32879',
       }
     },
   },

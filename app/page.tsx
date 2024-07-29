@@ -324,7 +324,7 @@ export default function Home() {
         <div className="container text-center py-20">
           <span className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
           <p className="text-[45px] text-white font-bold">Top Designers</p>
-          <ul className="grid grid-cols-3 gap-5">
+          <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
             {ourTeam.map((item, index) => (
               <li
                 onMouseEnter={() => setTeam(index)}

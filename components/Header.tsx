@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
 const Header = () => {
+  const [munBu, setMunBu] = useState(false)
   const pathname = usePathname()
 
   return (
@@ -34,10 +35,15 @@ const Header = () => {
             })}
           </ul>
           {/* mobile */}
-          <div className="md:hidden bg-[#606060] text-white font-bold gap-2 cursor-pointer flex items-center p-3 py-1">
+          <div onClick={()=>setMunBu(prev=>!prev)} className="md:hidden bg-[#606060] text-white font-bold gap-2 cursor-pointer flex items-center p-3 py-1">
             MENU <Menu />
           </div>
         </div>
+        {munBu && (
+          <ul className='md:hidden flex w-full text-white'>
+             <li></li> 
+          </ul>
+        )}
       </div>
       {/* faq */}
       

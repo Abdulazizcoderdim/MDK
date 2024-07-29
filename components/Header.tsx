@@ -2,7 +2,6 @@
 
 import { navItems } from '@/constants'
 import { Menu } from 'lucide-react'
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
@@ -16,7 +15,7 @@ const Header = () => {
         <div className="flex py-7 container justify-between items-center ">
           <h1>
             <Link href={'/'}>
-              <Image src="/logo.png" alt="" fill />
+              <img src="/logo.png" alt="" />
             </Link>
           </h1>
           <ul className="md:flex hidden items-center gap-8 font-bold text-white">

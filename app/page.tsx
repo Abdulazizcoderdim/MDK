@@ -11,7 +11,6 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react'
-import Image from 'next/image'
 import { useState } from 'react'
 import CountUp from 'react-countup'
 
@@ -46,7 +45,7 @@ export default function Home() {
           <div>
             {/* 1-chi */}
             <div className="md:flex flex-row justify-between md:space-x-10 max-md:space-y-10 items-center">
-              <Image width="100" height="100" className="md:w-1/2 rounded-lg" src="/home.png" alt="" />
+              <img className="md:w-1/2 rounded-lg" src="/home.png" alt="" />
               <div className="flex md:w-1/2 flex-col space-y-3">
                 <h1 className="text-sm font-bold uppercase text-[#e32879]">
                   FAQ
@@ -88,7 +87,7 @@ export default function Home() {
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
                   >
-                    <Image fill src={item.icon} alt="" className="mx-auto" />
+                    <img src={item.icon} alt="" className="mx-auto" />
                     <p className="text-[22px] font-bold">{item.title}</p>
                     <p className="text-sm text-[#b3b3b3] font-normal">
                       {item.desc}
@@ -120,8 +119,7 @@ export default function Home() {
               onMouseLeave={() => setPhotoHover(null)}
               className="w-1/2 max-md:w-full relative"
             >
-              <Image
-                fill
+              <img
                 className="h-full w-full object-cover"
                 src="/w1.png"
                 alt=""
@@ -152,8 +150,7 @@ export default function Home() {
                 onMouseLeave={() => setPhotoHover(null)}
                 className="md:h-1/2 relative"
               >
-                <Image
-                fill
+                <img
                   className="h-full w-full object-cover"
                   src="/w2.png"
                   alt=""
@@ -184,8 +181,7 @@ export default function Home() {
                   onMouseLeave={() => setPhotoHover(null)}
                   className="w-1/2 max-md:w-full relative"
                 >
-                  <Image
-                  fill
+                  <img
                     className="object-cover h-full w-full"
                     src="w3.png"
                     alt=""
@@ -215,8 +211,7 @@ export default function Home() {
                   onMouseLeave={() => setPhotoHover(null)}
                   className="w-1/2 max-md:w-full relative"
                 >
-                  <Image
-                  fill
+                  <img
                     className="object-cover h-full w-full"
                     src="w4.png"
                     alt=""
@@ -303,13 +298,10 @@ export default function Home() {
         <Slider />
 
         <div className="relative flex items-center justify-center bg-pink-500 text-white">
-          <Image
-          fill
-            src={'/bgImage.jpg'}
+          <img
+            src={'/bgimg.jpg'}
             alt="Background"
-            layout="fill"
-            objectFit="cover"
-            className="absolute inset-0 z-0"
+            className="absolute object-cover inset-0 z-0"
           />
           <div className="relative right-0 left-0 w-full py-28 z-10 p-4 bg-pink-600 bg-opacity-85 text-center">
             <h1 className="text-4xl font-bold mb-4">
@@ -340,7 +332,7 @@ export default function Home() {
                 className="text-white relative transition-all duration-300"
                 key={index}
               >
-                <Image fill className="" src={item.img} alt="" />
+                <img className="" src={item.img} alt="" />
                 <div
                   className={`space-y-8 text-center absolute top-5 left-5 bottom-5 right-5 ${
                     team === index ? 'opacity-100' : 'opacity-0'

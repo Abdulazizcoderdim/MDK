@@ -33,7 +33,7 @@ const Slider = () => {
       >
         <SwiperSlide>
           <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex w-full gap-5 items-center">
-            <Image src="/t1.jpg" className="rounded-full" alt="" />
+            <Image fill src="/t1.jpg" className="rounded-full" alt="" />
             <div className="space-y-2">
               <h2 className="text-[22px] text-white font-bold">
                 Travis Crawford
@@ -48,7 +48,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex w-full gap-5 items-center">
-            <Image src="/t2.jpg" className="rounded-full" alt="" />
+            <Image fill src="/t2.jpg" className="rounded-full" alt="" />
             <div className="space-y-2">
               <h2 className="text-[22px] text-white font-bold">
                 Travis Crawford
@@ -63,7 +63,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex w-full gap-5 items-center">
-            <Image src="/t3.jpg" className="rounded-full" alt="" />
+            <Image fill src="/t3.jpg" className="rounded-full" alt="" />
             <div className="space-y-2">
               <h2 className="text-[22px] text-white font-bold">
                 Travis Crawford
@@ -78,7 +78,7 @@ const Slider = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="bg-[#222222] md:pt-[60px] pt-[50px] pr-[20px] md:pb-[50px] pb-[40px] pl-[40px] flex w-full gap-5 items-center">
-            <Image src="/t4.jpg" className="rounded-full" alt="" />
+            <Image fill src="/t4.jpg" className="rounded-full" alt="" />
             <div className="space-y-2">
               <h2 className="text-[22px] text-white font-bold">
                 Travis Crawford

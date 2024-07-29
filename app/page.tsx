@@ -2,6 +2,7 @@
 
 import Modal from '@/components/Modal'
 import { homeWork } from '@/constants'
+import { useModalSrc } from '@/hooks'
 import { Link, Search } from 'lucide-react'
 import { useState } from 'react'
 
@@ -11,8 +12,9 @@ export default function Home() {
     'rasm1' | 'rasm2' | 'rasm3' | 'rasm4' | null
   >(null)
   const [modalSearch, setModalSearch] = useState<
-  'rasm1' | 'rasm2' | 'rasm3' | 'rasm4' | null
->(null)
+    'rasm1' | 'rasm2' | 'rasm3' | 'rasm4' | null
+  >(null)
+  const [modal, setModal] = useState(false)
 
   return (
     <div>
@@ -122,7 +124,7 @@ export default function Home() {
                   <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                     <Link />
                   </span>
-                  <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                  <span onClick={() => {setModalSearch('rasm1'), setModal(true)}} className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                     <Search />
                   </span>
                 </div>
@@ -148,7 +150,7 @@ export default function Home() {
                     <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                       <Link />
                     </span>
-                    <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                    <span onClick={() => {setModalSearch('rasm2'), setModal(true)}} className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                       <Search />
                     </span>
                   </div>
@@ -174,7 +176,7 @@ export default function Home() {
                       <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                         <Link />
                       </span>
-                      <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                      <span onClick={() => {setModalSearch('rasm3'), setModal(true)}} className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                         <Search />
                       </span>
                     </div>
@@ -199,7 +201,7 @@ export default function Home() {
                       <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                         <Link />
                       </span>
-                      <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                      <span onClick={() => {setModalSearch('rasm4'), setModal(true)}} className="p-5 rounded-full bg-[#e32879] cursor-pointer">
                         <Search />
                       </span>
                     </div>
@@ -213,7 +215,9 @@ export default function Home() {
 
       {/* modal */}
 
-      <Modal setModalSearch={setModalSearch} />
+      {modal && (
+        <Modal modalSearch={modalSearch} setModal={setModal} setModalSearch={setModalSearch} />
+      )}
     </div>
   )
 }

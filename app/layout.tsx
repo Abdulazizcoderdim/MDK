@@ -20,10 +20,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        {children}
         <div className="flex items-center h-[100vh] bg-transparent text-white">
-          <div className="ml-96 bg-[#AB4F81]/40 backdrop-blur-sm text-center rounded-xl w-96 min-h-96 py-5">
-            <h1 className='font-semibold'>"MOTION DESIGN KEEP PEOPLE WONDERING"</h1>
+          <div className="lg:ml-96 md:ml-52 ml-16 bg-[#AB4F81]/40 backdrop-blur-sm text-center rounded-xl w-96 min-h-96 py-5">
+            <h1 className="font-semibold">
+              "MOTION DESIGN KEEP PEOPLE WONDERING"
+            </h1>
             <h1 className="text-6xl pt-10 font-bold">MDK.PW</h1>
             <p className="mt-4 text-base">
               Абсолютно любая работа для вашего проекта, которая подается с
@@ -34,6 +35,7 @@ export default function RootLayout({
             </button>
           </div>
         </div>
+        {children}
         <Footer />
       </body>
     </html>

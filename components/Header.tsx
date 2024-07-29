@@ -94,7 +94,11 @@ interface FlyoutLinkProps {
   className?: string
 }
 
-const FlyoutLink = ({ children, FlyoutContent }: FlyoutLinkProps) => {
+const FlyoutLink = ({
+  children,
+  FlyoutContent,
+  className,
+}: FlyoutLinkProps) => {
   const [open, setOpen] = useState(false)
 
   const showFlyout = open && FlyoutContent
@@ -104,7 +108,7 @@ const FlyoutLink = ({ children, FlyoutContent }: FlyoutLinkProps) => {
       onMouseLeave={() => setOpen(false)}
       className="relative h-fit w-fit"
     >
-      {children}
+      <p className={className}>{children}</p>
       {showFlyout && (
         <div className="absolute rounded-lg left-0 top-12 bg-white text-black">
           <div className="absolute -top-6 left-0 right-0 h-6 bg-transparent" />
@@ -118,16 +122,16 @@ const FlyoutLink = ({ children, FlyoutContent }: FlyoutLinkProps) => {
 const PricingContent = () => {
   return (
     <ul className="w-48 min-h-24 bg-slate-50 text-black font-bold text-lg space-y-3 p-6 shadow hover:shadow-lg transition duration-200 ">
-      <li className="hover:text-redd transition-all duration-200" >
+      <li className="hover:text-redd transition-all duration-200">
         <Link href={'#'}>Naoh</Link>
       </li>
-      <li className="hover:text-redd transition-all duration-200" >
+      <li className="hover:text-redd transition-all duration-200">
         <Link href={'#'}>Padis</Link>
       </li>
-      <li className="hover:text-redd transition-all duration-200" >
+      <li className="hover:text-redd transition-all duration-200">
         <Link href={'#'}>Jacob</Link>
       </li>
-      <li className="hover:text-redd transition-all duration-200" >
+      <li className="hover:text-redd transition-all duration-200">
         <Link href={'#'}>Gomez</Link>
       </li>
     </ul>

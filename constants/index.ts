@@ -139,8 +139,4 @@ export const videos = [
     src: 'https://mdk.pw/img/port/Comp%201.mp4',
     category: 'FASHION',
   },
-  {
-    src: 'https://mdk.pw/img/port/Comp%201.mp4',
-    category: 'OTHER',
-  },
 ]

@@ -2,7 +2,7 @@
 
 import LinkPage from '@/components/LinkPage'
 import PlacePage from '@/components/PlacePage'
-import { ourTeam, ourTeamAbout } from '@/constants'
+import { ourTeamAbout } from '@/constants'
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 import { useState } from 'react'
 import CountUp from 'react-countup'
@@ -33,44 +33,44 @@ const AboutPage = () => {
                   <CountUp
                     className=" md:text-4xl text-2xl font-bold"
                     start={0}
-                    end={2034}
+                    end={8384}
                     duration={2.7}
                     separator=""
                   />
                   <p className="text-base text-[#b3b3b3]">MEMBER</p>
                 </div>
-                <div className="w-1 h-full bg-gray-600" />
+                <div className="w-[1px] h-16 bg-gray-700" />
                 <div className="space-y-3">
                   <CountUp
                     className=" md:text-4xl text-2xl font-bold"
                     start={0}
-                    end={2034}
+                    end={6880}
                     duration={2.7}
                     separator=""
                   />
-                  <p className="text-base text-[#b3b3b3]">MEMBER</p>
+                  <p className="text-base text-[#b3b3b3]">PARTNER</p>
                 </div>
-                <div className="w-1 h-full bg-gray-600" />
+                <div className="w-[1px] h-16 bg-gray-700" />
                 <div className="space-y-3">
                   <CountUp
                     className=" md:text-4xl text-2xl font-bold"
                     start={0}
-                    end={2034}
+                    end={1546}
                     duration={2.7}
                     separator=""
                   />
-                  <p className="text-base text-[#b3b3b3]">MEMBER</p>
+                  <p className="text-base text-[#b3b3b3]">BRANCH</p>
                 </div>
-                <div className="w-1 h-full bg-gray-600" />
+                <div className="w-[1px] h-16 bg-gray-700" />
                 <div className="space-y-3">
                   <CountUp
                     className=" md:text-4xl text-2xl font-bold"
                     start={0}
-                    end={2034}
+                    end={4677}
                     duration={2.7}
                     separator=""
                   />
-                  <p className="text-base text-[#b3b3b3]">MEMBER</p>
+                  <p className="text-base text-[#b3b3b3]">DESIGNS</p>
                 </div>
               </div>
             </div>

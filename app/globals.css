@@ -7,3 +7,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.transition-all {
+  transition: all 0.3s ease-in-out;
+}

@@ -9,7 +9,8 @@ const Header = () => {
   const pathname = usePathname()
 
   return (
-    <div className="flex container py-7 justify-between items-center bg-[#191919]">
+    <div className='bg-[#191919]'>
+    <div className="flex py-7 container justify-between items-center ">
       <h1>
         <Link href={'/'}>
           <img src="/logo.png" alt="" />
@@ -24,7 +25,7 @@ const Header = () => {
                 isActive && 'text-[#E32879]'
               }`}
               key={index}
-            >
+              >
               <Link href={item.href}>{item.title}</Link>
             </li>
           )
@@ -35,6 +36,7 @@ const Header = () => {
         MENU <Menu />
       </div>
     </div>
+        </div>
   )
 }
 

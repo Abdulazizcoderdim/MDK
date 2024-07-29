@@ -1,8 +1,8 @@
+import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import Footer from '@/components/Footer'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,7 +21,20 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
-        <Footer/>
+        <div className="flex items-center h-[100vh] bg-transparent text-white">
+          <div className="ml-96 bg-[#AB4F81]/40 backdrop-blur-sm text-center rounded-xl w-96 min-h-96 py-5">
+            <h1 className='font-semibold'>"MOTION DESIGN KEEP PEOPLE WONDERING"</h1>
+            <h1 className="text-6xl pt-10 font-bold">MDK.PW</h1>
+            <p className="mt-4 text-base">
+              Абсолютно любая работа для вашего проекта, которая подается с
+              душой и уникальными ходовыми функциями.
+            </p>
+            <button className="mt-6 px-6 py-3 bg-pink-600 text-white font-semibold">
+              Заказать
+            </button>
+          </div>
+        </div>
+        <Footer />
       </body>
     </html>
   )

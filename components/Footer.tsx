@@ -2,8 +2,9 @@ import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
 
 const Footer = () => {
   return (
-    <div className="text-white z-50 container bg-[#191919] py-10">
-      <div className="grid grid-cols-4 gap-5">
+    <div className="text-white z-50 bg-[#191919] py-10">
+      <div className='container'>
+      <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
         <div className="space-y-3 text-[#b3b3b3] text-base ">
           <img src="/logo.png" alt="" />
           <p>Address: 60-49 Road 11378 New York</p>
@@ -48,18 +49,20 @@ const Footer = () => {
         <div className="space-y-3 text-[#b3b3b3]">
           <h2 className="text-xl font-bold text-white">Instagram</h2>
           <div className="grid grid-cols-3 gap-2">
-            <img src="/i1.jpg" alt="" />
-            <img src="/i2.jpg" alt="" />
-            <img src="/i3.jpg" alt="" />
-            <img src="/i4.jpg" alt="" />
-            <img src="/i5.jpg" alt="" />
-            <img src="/i6.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/i1.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/i2.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/i3.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/i4.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/i5.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/i6.jpg" alt="" />
           </div>
         </div>
       </div>
       <p className="flex justify-center mt-10 text-[#b3b3b3]">
-      Copyright ©{new Date().getFullYear()} All rights reserved | This template is made with  by Colorlib
+        Copyright ©{new Date().getFullYear()} All rights reserved | This
+        template is made with by Colorlib
       </p>
+      </div>
     </div>
   )
 }

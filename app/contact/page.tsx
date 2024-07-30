@@ -1,6 +1,18 @@
+'use client'
+
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { LocateIcon, Mail, Phone } from 'lucide-react'
+import { useEffect } from 'react'
 
 const ContactPage = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
+
   return (
     <div>
       <div className="w-full">
@@ -11,10 +23,12 @@ const ContactPage = () => {
           className="border-none w-full"
           loading="lazy"
         ></iframe>
-        
       </div>
       <div className="bg-[#222222]">
-        <div className="container py-24 flex max-lg:flex-col max-lg:space-y-10 justify-between">
+        <div
+          data-aos="fade-down"
+          className="container py-24 flex max-lg:flex-col max-lg:space-y-10 justify-between"
+        >
           <div className="text-white space-y-4">
             <h1 className="font-bold text-2xl">Contacts Us</h1>
             <div className="flex gap-5 items-center">
@@ -48,20 +62,30 @@ const ContactPage = () => {
           <div className="text-white space-y-4">
             <h1 className="font-bold text-2xl">Leave A Comment</h1>
             <form action="" className="space-y-5">
-              <div className='flex flex-col gap-7'>
+              <div className="flex flex-col gap-7">
                 <div className="flex max-md:flex-col items-center gap-7">
-                  <input className='outline-none bg-transparent border max-md:w-full py-3 px-3' type="text" placeholder="Name" />
-                  <input className='outline-none bg-transparent border max-md:w-full py-3 px-3' type="text" placeholder="Email" />
+                  <input
+                    className="outline-none bg-transparent border max-md:w-full py-3 px-3"
+                    type="text"
+                    placeholder="Name"
+                  />
+                  <input
+                    className="outline-none bg-transparent border max-md:w-full py-3 px-3"
+                    type="text"
+                    placeholder="Email"
+                  />
                 </div>
                 <textarea
-                  className='border outline-none bg-transparent p-3'
+                  className="border outline-none bg-transparent p-3"
                   name="text"
                   title="messages"
                   placeholder="Messages"
                   id=""
                 ></textarea>
               </div>
-              <button className="bg-redd px-7 mt-5 py-3 text-white ">Send Message</button>
+              <button className="bg-redd px-7 mt-5 py-3 text-white ">
+                Send Message
+              </button>
             </form>
           </div>
         </div>

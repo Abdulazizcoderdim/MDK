@@ -2,7 +2,9 @@
 
 import GaleryModal from '@/components/GaleryModal'
 import { videos } from '@/constants'
-import { useState } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import { useEffect, useState } from 'react'
 
 const GalleryPage = () => {
   const [modal, setModal] = useState(false)
@@ -15,11 +17,17 @@ const GalleryPage = () => {
 
     setItems(updatedItems)
   }
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
 
   return (
     <div className="bg-[#222222] py-24">
       <div className="container text-center w-full space-y-16">
-        <div className="flex items-center gap-10 text-center justify-center text-white font-bold">
+        <div data-aos="fade-down" className="flex items-center gap-10 text-center justify-center text-white font-bold">
           <span
             className="hover:text-redd focus:text-redd cursor-pointer transition-all duration-200 text-lg"
             onClick={() => setItems(videos)}
@@ -56,7 +64,7 @@ const GalleryPage = () => {
           {items.map((elem, index) => {
             const { src, category } = elem
             return (
-              <div key={index} className="relative w-full pb-[100%]"> 
+              <div data-aos="fade-down" key={index} className="relative w-full pb-[100%]">
                 <video
                   onClick={() => {
                     setModal(true)

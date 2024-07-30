@@ -107,7 +107,7 @@ const FlyoutLink = ({
     <div
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
-      className="relative h-fit w-fit"
+      className="relative h-fit w-fit z-50"
     >
       <p className={className}>{children}</p>
       <AnimatePresence>

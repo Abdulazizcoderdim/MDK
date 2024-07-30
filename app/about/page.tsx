@@ -4,17 +4,25 @@ import LinkPage from '@/components/LinkPage'
 import PlacePage from '@/components/PlacePage'
 import { ourTeamAbout } from '@/constants'
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const AboutPage = () => {
   const [team, setTeam] = useState<number | null>(null)
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
   return (
     <div>
       <LinkPage path="about" page="About Us" />
       <div className="bg-[#191919]">
         <div className="container py-24">
-          <div className="flex max-md:flex-col items-center gap-14 justify-between">
+          <div data-aos="fade-down" className="flex max-md:flex-col items-center gap-14 justify-between">
             <img src="/a.jpg" className="md:w-1/2" alt="" />
             <div className="space-y-4 md:w-1/2 text-white">
               <p className="text-redd text-sm font-bold">ABOUT US</p>
@@ -77,9 +85,11 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="container text-center py-20">
-          <span className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
-          <p className="text-[45px] text-white font-bold mb-10">Top Designers</p>
-          <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+          <span data-aos="fade-down" className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
+          <p data-aos="fade-down" className="text-[45px] text-white font-bold mb-10">
+            Top Designers
+          </p>
+          <ul data-aos="fade-down" className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
             {ourTeamAbout.map((item, index) => (
               <li
                 onMouseEnter={() => setTeam(index)}

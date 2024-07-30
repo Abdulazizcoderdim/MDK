@@ -5,6 +5,8 @@ import Modal from '@/components/Modal'
 import PlacePage from '@/components/PlacePage'
 import Slider from '@/components/Slider'
 import { homeWork, ourTeam } from '@/constants'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import {
   Facebook,
   Instagram,
@@ -13,7 +15,7 @@ import {
   Twitter,
   Youtube,
 } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import CountUp from 'react-countup'
 
 export default function Home() {
@@ -26,6 +28,13 @@ export default function Home() {
   >(null)
   const [modal, setModal] = useState(false)
   const [team, setTeam] = useState<number | null>(null)
+  // AOS
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
 
   return (
     <div>
@@ -39,9 +48,9 @@ export default function Home() {
 
       <div className="bg-[#191919]">
         <div className="container py-24">
-          <div>
+          <div >
             {/* 1-chi */}
-            <div className="md:flex flex-row justify-between md:space-x-10 max-md:space-y-10 items-center">
+            <div data-aos="fade-down" className="md:flex flex-row justify-between md:space-x-10 max-md:space-y-10 items-center">
               <video
                 className="rounded-3xl"
                 src="/dva1.mp4"
@@ -74,7 +83,7 @@ export default function Home() {
               </div>
             </div>
             {/* 2-chi */}
-            <div className="mt-28">
+            <div data-aos="fade-down" className="mt-28">
               <div className="text-center tracking-tighter">
                 <p className="text-[#e32879] text-sm font-bold uppercase">
                   АБСОЛЮТНО ЛЮБОЙ ВИД РАБОТЫ
@@ -106,8 +115,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#222222] py-24 text-center">
-        <div className="tracking-tighter container pb-28">
+      <div  className="bg-[#222222] py-24 text-center">
+        <div data-aos="fade-down" className="tracking-tighter container pb-28">
           <p className="text-[#e32879] text-sm uppercase font-bold">
             МОЁ ПОРТФОЛИО
           </p>
@@ -117,9 +126,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="bg-[#191919]">
+      <div  className="bg-[#191919]">
         <div className="container">
-          <div className="flex max-md:flex-col text-white -translate-y-36">
+          <div data-aos="fade-down" className="flex max-md:flex-col text-white -translate-y-36">
             <div
               onMouseEnter={() => setPhotoHover('rasm1')}
               onMouseLeave={() => setPhotoHover(null)}
@@ -256,7 +265,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex max-md:flex-col max-md:space-y-10 justify-between container">
+        <div data-aos="fade-down" className="flex max-md:flex-col max-md:space-y-10 justify-between container">
           <div className="md:w-1/2 text-white space-y-4">
             <h3 className="text-redd text-sm font-bold uppercase">
               NUMBER SPEAKS
@@ -317,11 +326,11 @@ export default function Home() {
 
         {/* our team */}
         <div className="container text-center py-20">
-          <span className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
-          <p className="text-[45px] text-white font-bold mb-10">
+          <span data-aos="fade-down" className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
+          <p data-aos="fade-down" className="text-[45px] text-white font-bold mb-10">
             Top Designers
           </p>
-          <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+          <ul data-aos="fade-down" className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
             {ourTeam.map((item, index) => (
               <li
                 onMouseEnter={() => setTeam(index)}
@@ -363,7 +372,7 @@ export default function Home() {
 
       {/* blog */}
       <div className="bg-[#222222] py-20 text-center">
-        <div className="mb-10">
+        <div data-aos="fade-down" className="mb-10">
           <h3 className="text-[#e32879] text-sm font-bold uppercase">
             Latest Blog
           </h3>
@@ -371,7 +380,7 @@ export default function Home() {
             From Our Blog
           </h1>
         </div>
-        <div className="container flex gap-5 max-lg:flex-col justify-between">
+        <div data-aos="fade-down" className="container flex gap-5 max-lg:flex-col justify-between">
           <BlogPlace srcA="/author-1.jpg" srcB="/blog-1.jpg" />
           <BlogPlace srcA="/author-2.jpg" srcB="/blog-2.jpg" />
         </div>

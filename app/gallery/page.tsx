@@ -27,7 +27,7 @@ const GalleryPage = () => {
   return (
     <div className="bg-[#222222] py-24">
       <div className="container text-center w-full space-y-16">
-        <div data-aos="fade-down" className="flex items-center gap-10 text-center justify-center text-white font-bold">
+        <div data-aos="fade-down" className="flex items-center md:gap-10 gap-5 flex-wrap text-center justify-center text-white font-bold">
           <span
             className="hover:text-redd focus:text-redd cursor-pointer transition-all duration-200 text-lg"
             onClick={() => setItems(videos)}

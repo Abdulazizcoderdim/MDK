@@ -332,8 +332,8 @@ export default function Home() {
                 <img className="" src={item.img} alt="" />
                 <div
                   className={`md:space-y-8 space-y-2 text-center absolute top-5 left-5 bottom-5 right-5 ${
-                    team === index ? 'opacity-100' : 'opacity-0'
-                  } transition-all duration-300 md:py-16 py-5 px-5 bg-[#191919]`}
+                    team === index ? 'opacity-100' : 'opacity-0 scale-0'
+                  } transition-all duration-500 md:py-16 py-5 px-5 bg-[#191919]`}
                 >
                   <p className="text-[#b3b3b3] font-normal text-base">
                     {item.desc}

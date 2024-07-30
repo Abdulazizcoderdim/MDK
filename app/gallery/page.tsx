@@ -52,19 +52,21 @@ const GalleryPage = () => {
           </span>
         </div>
 
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
           {items.map((elem, index) => {
             const { src, category } = elem
             return (
-              <div className="" key={index}>
+              <div key={index} className="relative w-full pb-[100%]"> 
                 <video
-                  onClick={() => {setModal(true), setSrcM(src)}}
-                  className="hover:scale-105 transition-all duration-200 w-full aspect-square"
+                  onClick={() => {
+                    setModal(true)
+                    setSrcM(src)
+                  }}
+                  className="absolute top-0 left-0 w-full h-full object-cover hover:scale-105 transition-all duration-200"
                   src={src}
                   autoPlay
                   loop
                   muted
-                  id="bgVideo"
                 >
                   <source src={src} type="video/mp4" />
                 </video>

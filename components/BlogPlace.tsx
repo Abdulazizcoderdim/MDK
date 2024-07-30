@@ -1,9 +1,9 @@
 import { Calendar, Mails } from 'lucide-react'
 
-const BlogPlace = () => {
+const BlogPlace = ({srcA,srcB}:{srcA:string,srcB:string}) => {
   return (
     <div className="md:w-1/2 max-sm:flex-col  flex">
-      <img className="md:w-[300px] h-[400px] " src="/b.png" alt="" />
+      <img className="md:w-[300px] h-[400px] " src={srcB} alt="" />
       <div className="bg-[#191919] flex flex-col min-w-72 justify-between p-10">
         <p className="text-redd flex items-center gap-1">
           <Calendar width={15} height={15} /> August 9, 2019{' '}
@@ -16,7 +16,7 @@ const BlogPlace = () => {
           Never ever think of giving up. Winners never quit and
         </p>
         <div className="flex gap-2 items-center">
-          <img src="/a1.jpg" className="rounded-full" alt="" />
+          <img src={srcA} className="rounded-full" alt="" />
           <div className="text-start">
             <h2 className="text-white text-lg font-bold">Aaron Russell</h2>
             <span className="text-redd">DESIGNER</span>

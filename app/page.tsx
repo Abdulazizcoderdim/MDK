@@ -30,16 +30,11 @@ export default function Home() {
   return (
     <div>
       <div className="relative flex items-center justify-center bg-red-300 ">
-        <video
+        <img
+          title='finish'
           className="fixed right-0 left-0 w-full h-screen object-cover origin-center -z-10 top-0 bottom-0"
-          src="/finish.mp4"
-          autoPlay
-          loop
-          muted
-          id="bgVideo"
-        >
-          <source src="/finish.mp4" type="video/mp4" />
-        </video>
+          src="/finish.gif"
+        />
       </div>
 
       <div className="bg-[#191919]">
@@ -47,7 +42,16 @@ export default function Home() {
           <div>
             {/* 1-chi */}
             <div className="md:flex flex-row justify-between md:space-x-10 max-md:space-y-10 items-center">
-              <img className="md:w-1/2 rounded-lg" src="/home.png" alt="" />
+              <video
+                className="rounded-3xl"
+                src="/dva1.mp4"
+                autoPlay
+                loop
+                muted
+                id="bgVideo"
+              >
+                <source src="/dva1.mp4" type="video/mp4" />
+              </video>
               <div className="flex md:w-1/2 flex-col space-y-3">
                 <h1 className="text-sm font-bold uppercase text-[#e32879]">
                   FAQ
@@ -304,7 +308,9 @@ export default function Home() {
         {/* our team */}
         <div className="container text-center py-20">
           <span className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
-          <p className="text-[45px] text-white font-bold">Top Designers</p>
+          <p className="text-[45px] text-white font-bold mb-10">
+            Top Designers
+          </p>
           <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
             {ourTeam.map((item, index) => (
               <li
@@ -346,10 +352,18 @@ export default function Home() {
       </div>
 
       {/* blog */}
-      <div className="bg-[#222222] py-20">
+      <div className="bg-[#222222] py-20 text-center">
+        <div className="mb-10">
+          <h3 className="text-[#e32879] text-sm font-bold uppercase">
+            Latest Blog
+          </h3>
+          <h1 className="text-white md:text-[45px] text-[40px] font-bold">
+            From Our Blog
+          </h1>
+        </div>
         <div className="container flex gap-5 max-lg:flex-col justify-between">
-          <BlogPlace />
-          <BlogPlace />
+          <BlogPlace srcA="/author-1.jpg" srcB="/blog-1.jpg" />
+          <BlogPlace srcA="/author-2.jpg" srcB="/blog-2.jpg" />
         </div>
       </div>
 

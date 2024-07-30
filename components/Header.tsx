@@ -1,16 +1,17 @@
 'use client'
 
 import { navItems } from '@/constants'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronRight, Menu } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
 
 const Header = () => {
   const [munBu, setMunBu] = useState(false)
+  const [subMenu, setSubMenu] = useState(false)
   const pathname = usePathname()
   useEffect(() => {
     Aos.init({
@@ -22,7 +23,10 @@ const Header = () => {
   return (
     <>
       <div className="bg-[#191919]">
-        <div data-aos="fade-down" className="flex py-7 container justify-between items-center ">
+        <div
+          data-aos="fade-down"
+          className="flex py-7 container justify-between items-center "
+        >
           <h1>
             <Link href={'/'}>
               <img src="/logo.png" alt="" />
@@ -53,22 +57,38 @@ const Header = () => {
           </div>
         </div>
         {munBu && (
-          <ul className="md:hidden mx-5 bg-[#666666] transition-all duration-300 px-7 text-base py-3 space-y-3 text-white">
-            <li>
+          <ul className="md:hidden mx-5 bg-[#666666] transition-all duration-300  text-base py-3 space-y-3 text-white">
+            <li className="active:bg-redd px-7 py-2 cursor-pointer">
               <Link href={'/'}>Главная</Link>
             </li>
-            <li>
+            <li className="active:bg-redd px-7 py-2 cursor-pointer">
               <Link href={'/about'}>About Us</Link>
             </li>
-            <li>
+            <li className="active:bg-redd px-7 py-2 cursor-pointer">
               <Link href={'/blog'}>Blog</Link>
             </li>
-            <li>
+            <li onClick={() => setSubMenu(prev=>!prev)} className="active:bg-redd px-7 py-2 cursor-pointer">
               <Link className="flex items-center" href={'/gallery'}>
                 Gallery <ChevronRight width={20} height={20} />
               </Link>
             </li>
-            <li>
+            {subMenu && (
+              <>
+                <li className="active:bg-redd px-10 py-2 cursor-pointer">
+                  <Link href={'#'}>Haoh</Link>
+                </li>
+                <li className="active:bg-redd px-10 py-2 cursor-pointer">
+                  <Link href={'#'}>Padis</Link>
+                </li>
+                <li className="active:bg-redd px-10 py-2 cursor-pointer">
+                  <Link href={'#'}>Jacob</Link>
+                </li>
+                <li className="active:bg-redd px-10 py-2 cursor-pointer">
+                  <Link href={'#'}>Gomez</Link>
+                </li>
+              </>
+            )}
+            <li className="active:bg-redd px-7 py-2 cursor-pointer">
               <Link href={'/contact'}>Contact</Link>
             </li>
           </ul>
@@ -77,7 +97,10 @@ const Header = () => {
       {/* faq */}
 
       {pathname === '/' && (
-        <div data-aos="fade-down" className="flex items-center h-[100vh] bg-transparent text-white">
+        <div
+          data-aos="fade-down"
+          className="flex items-center h-[100vh] bg-transparent text-white"
+        >
           <div className="lg:ml-96 md:ml-52 sm:ml-5 ml-0 bg-[#AB4F81]/40 backdrop-blur-sm text-center rounded-xl w-96 min-h-96 py-5">
             <h1 className="font-semibold">
               &quot;MOTION DESIGN KEEP PEOPLE WONDERING&quot;

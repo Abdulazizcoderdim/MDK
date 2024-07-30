@@ -4,7 +4,7 @@ const BlogPlace = ({srcA,srcB}:{srcA:string,srcB:string}) => {
   return (
     <div className="md:w-1/2 max-sm:flex-col  flex">
       <img className="md:w-[300px] h-[400px] " src={srcB} alt="" />
-      <div className="bg-[#191919] flex flex-col min-w-72 justify-between p-10">
+      <div className="bg-[#191919] flex flex-col min-w-60 justify-between p-10">
         <p className="text-redd flex items-center gap-1">
           <Calendar width={15} height={15} /> August 9, 2019{' '}
           <Mails width={15} height={15} /> 0

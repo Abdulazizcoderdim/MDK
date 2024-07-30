@@ -88,7 +88,7 @@ export default function Home() {
                 <p className="text-[#e32879] text-sm font-bold uppercase">
                   АБСОЛЮТНО ЛЮБОЙ ВИД РАБОТЫ
                 </p>
-                <h1 className="text-[45px] max-md:text-[35px] text-white font-bold">
+                <h1 className="text-[45px] max-md:text-[30px] text-white font-bold">
                   Я обучаюсь вместе с вашими идеями и предложениями
                 </h1>
               </div>

@@ -5,16 +5,24 @@ import { AnimatePresence, motion } from 'framer-motion'
 import { ChevronRight, Menu } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import Aos from 'aos'
+import 'aos/dist/aos.css'
 
 const Header = () => {
   const [munBu, setMunBu] = useState(false)
   const pathname = usePathname()
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+      once: true,
+    })
+  }, [])
 
   return (
     <>
       <div className="bg-[#191919]">
-        <div className="flex py-7 container justify-between items-center ">
+        <div data-aos="fade-down" className="flex py-7 container justify-between items-center ">
           <h1>
             <Link href={'/'}>
               <img src="/logo.png" alt="" />
@@ -69,7 +77,7 @@ const Header = () => {
       {/* faq */}
 
       {pathname === '/' && (
-        <div className="flex items-center h-[100vh] bg-transparent text-white">
+        <div data-aos="fade-down" className="flex items-center h-[100vh] bg-transparent text-white">
           <div className="lg:ml-96 md:ml-52 sm:ml-5 ml-0 bg-[#AB4F81]/40 backdrop-blur-sm text-center rounded-xl w-96 min-h-96 py-5">
             <h1 className="font-semibold">
               &quot;MOTION DESIGN KEEP PEOPLE WONDERING&quot;

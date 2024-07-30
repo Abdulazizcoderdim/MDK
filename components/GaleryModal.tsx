@@ -19,9 +19,10 @@ const GaleryModal = ({ setModal, src }: ModalProps): JSX.Element => {
       onClick={closeModal}
       className="fixed flex justify-center items-center z-[1002] inset-0 bg-black bg-opacity-30 backdrop-blur-sm"
     >
-      <div>
+      <div className='bg-red-400'>
+
         <video
-          className="hover:scale-105 transition-all duration-200 w-[800px] h-[650px]"
+          className="hover:scale-105 transition-all duration-200 max-sm:h-[400px] max-md:w-[500px] max-md:h-[400px] w-[800px] h-[650px]"
           src={src as string}
           autoPlay
           loop

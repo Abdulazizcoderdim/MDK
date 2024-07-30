@@ -40,7 +40,7 @@ const Modal = ({
           }
           height={500}
           className="object-cover"
-          src={`/${modalSearch}.png`}
+          src={`/${modalSearch}.png` || `${modalSearch}.mp4`}
           alt=""
         />
       </div>

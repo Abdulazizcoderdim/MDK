@@ -31,7 +31,7 @@ export default function Home() {
     <div>
       <div className="relative flex items-center justify-center bg-red-300 ">
         <img
-          title='finish'
+          title="finish"
           className="fixed right-0 left-0 w-full h-screen object-cover origin-center -z-10 top-0 bottom-0"
           src="/finish.gif"
         />
@@ -127,7 +127,7 @@ export default function Home() {
             >
               <img
                 className="h-full w-full object-cover"
-                src="/w1.png"
+                src="https://nztcdn.com/files/bcea6246-9461-4d6c-b958-42a54a155f22.webp"
                 alt=""
               />
               <div
@@ -156,11 +156,16 @@ export default function Home() {
                 onMouseLeave={() => setPhotoHover(null)}
                 className="md:h-1/2 relative"
               >
-                <img
-                  className="h-full w-full object-cover"
-                  src="/w2.png"
-                  alt=""
-                />
+                <video
+                  className="rounded-3xl"
+                  src="/3d.mp4"
+                  autoPlay
+                  loop
+                  muted
+                  id=""
+                >
+                  <source src="/dva1.mp4" type="video/mp4" />
+                </video>
                 <div
                   className={`absolute inset-0 flex transition-all duration-500 items-center justify-center ${
                     photoHover === 'rasm2' ? 'flex' : 'opacity-0 flex'
@@ -187,11 +192,16 @@ export default function Home() {
                   onMouseLeave={() => setPhotoHover(null)}
                   className="w-1/2 max-md:w-full relative"
                 >
-                  <img
-                    className="object-cover h-full w-full"
-                    src="w3.png"
-                    alt=""
-                  />
+                  <video
+                    className="rounded-3xl"
+                    src="/3d2.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    id=""
+                  >
+                    <source src="/dva1.mp4" type="video/mp4" />
+                  </video>
                   <div
                     className={`absolute inset-0 transition-all duration-500 flex items-center justify-center ${
                       photoHover === 'rasm3' ? 'flex' : 'opacity-0 flex'

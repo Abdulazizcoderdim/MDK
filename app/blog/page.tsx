@@ -9,8 +9,8 @@ const BlogPage = () => {
       <div className="bg-[#222222]">
         <div className="container py-24">
           <div className="grid md:grid-cols-2 grid-cols-1 gap-5">
-            <BlogPlace />
-            <BlogPlace />
+            <BlogPlace srcA="/author-1.jpg" srcB="/blog-1.jpg" />
+            <BlogPlace srcA="/author-2.jpg" srcB="/blog-2.jpg"  />
             <div className="flex flex-col justify-between bg-redd  h-full p-20 text-white">
               <p className="text-white flex items-center gap-1">
                 <Calendar width={15} height={15} /> August 9, 2019{' '}
@@ -32,9 +32,9 @@ const BlogPage = () => {
                 </div>
               </div>
             </div>
-            <BlogPlace />
-            <BlogPlace />
-            <BlogPlace />
+            <BlogPlace srcA="/author-1.jpg" srcB="/blog-3.jpg" />
+            <BlogPlace srcA="/author-2.jpg" srcB="/blog-4.jpg" />
+            <BlogPlace srcA="/author-2.jpg" srcB="/blog-5.jpg" />
           </div>
           <div className='flex justify-center mt-16'>
             <button className="border outline-none border-redd px-10 bg-transparent text-white py-3">

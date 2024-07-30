@@ -78,7 +78,7 @@ const AboutPage = () => {
         </div>
         <div className="container text-center py-20">
           <span className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
-          <p className="text-[45px] text-white font-bold">Top Designers</p>
+          <p className="text-[45px] text-white font-bold mb-10">Top Designers</p>
           <ul className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
             {ourTeamAbout.map((item, index) => (
               <li

@@ -2,7 +2,7 @@ const PlacePage = () => {
   return (
     <div className="relative flex items-center justify-center bg-pink-500 text-white">
       <img
-        src={'/bgimg.jpg'}
+        src={'/ctc-bg.jpg'}
         alt="Background"
         className="absolute object-cover inset-0 z-0"
       />

@@ -140,19 +140,19 @@ export default function Home() {
                 alt=""
               />
               <div
-                className={`absolute inset-0 transition-all duration-500 items-center justify-center ${
-                  photoHover === 'rasm1' ? 'flex' : 'opacity-0 flex'
+                className={`absolute flex inset-0 transition-all duration-500 items-center justify-center ${
+                  photoHover === 'rasm1' ? 'opacity-100' : 'opacity-0'
                 }`}
               >
                 <div className="flex items-center gap-4">
-                  <span className="p-5 rounded-full bg-[#e32879] cursor-pointer">
+                  <span className={`p-5 rounded-full bg-[#e32879] cursor-pointer`}>
                     <Link />
                   </span>
                   <span
                     onClick={() => {
                       setModalSearch('rasm1'), setModal(true)
                     }}
-                    className="p-5 rounded-full bg-[#e32879] cursor-pointer"
+                    className={`p-5 rounded-full bg-[#e32879] cursor-pointer`}
                   >
                     <Search />
                   </span>

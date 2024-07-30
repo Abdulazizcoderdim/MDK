@@ -1,20 +1,9 @@
-"use client"
-
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
-import Aos from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect } from 'react'
 
 const Footer = () => {
-  useEffect(() => {
-    Aos.init({
-      duration: 1000,
-      once: true,
-    })
-  }, [])
   return (
     <div className="text-white z-50 bg-[#191919] py-10">
-      <div  className='container'>
+      <div className='container'>
       <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
         <div className="space-y-3 text-[#b3b3b3] text-base ">
           <img src="/logo.png" alt="" />

@@ -330,36 +330,36 @@ export default function Home() {
           <p data-aos="fade-down" className="text-[45px] text-white font-bold mb-10">
             Top Designers
           </p>
-          <ul data-aos="fade-down" className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
+          <ul data-aos="fade-down" className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
             {ourTeam.map((item, index) => (
               <li
                 onMouseEnter={() => setTeam(index)}
                 onMouseLeave={() => setTeam(null)}
-                className="text-white relative transition-all duration-300"
+                className="text-white relative flex justify-center transition-all duration-300"
                 key={index}
               >
                 <img className="" src={item.img} alt="" />
                 <div
-                  className={`md:space-y-8 space-y-2 text-center absolute top-5 left-5 bottom-5 right-5 ${
+                  className={`flex flex-col justify-between text-center absolute top-5 left-5 bottom-5 right-5 ${
                     team === index ? 'opacity-100' : 'opacity-0 scale-0'
                   } transition-all duration-500 md:py-16 py-5 px-5 bg-[#191919]`}
                 >
-                  <p className="text-[#b3b3b3] font-normal text-base">
+                  <p className="text-[#b3b3b3] font-normal sm:text-base text-sm">
                     {item.desc}
                   </p>
                   <h2 className="text-[22px] font-bold ">{item.name}</h2>
                   <p className="text-redd text-xs">{item.position}</p>
                   <div className="flex items-center gap-3 justify-center">
-                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
+                    <span className="md:p-4 sm:p-3 p-2 rounded-full bg-[#303030] cursor-pointer">
                       <Facebook />
                     </span>
-                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
+                    <span className="md:p-4 sm:p-3 p-2 rounded-full bg-[#303030] cursor-pointer">
                       <Twitter />
                     </span>
-                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
+                    <span className="md:p-4 sm:p-3 p-2 rounded-full bg-[#303030] cursor-pointer">
                       <Instagram />
                     </span>
-                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
+                    <span className="md:p-4 sm:p-3 p-2 rounded-full bg-[#303030] cursor-pointer">
                       <Youtube />
                     </span>
                   </div>

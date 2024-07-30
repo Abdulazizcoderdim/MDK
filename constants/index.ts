@@ -41,19 +41,19 @@ export const homeWork = [
 
 export const ourTeam = [
   {
-    img: '/team1.png',
+    img: '/member-1.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',
   },
   {
-    img: '/team2.png',
+    img: '/member-2.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',
   },
   {
-    img: '/team3.png',
+    img: '/member-3.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',

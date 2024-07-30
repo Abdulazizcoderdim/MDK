@@ -11,6 +11,7 @@ const ContactPage = () => {
           className="border-none w-full"
           loading="lazy"
         ></iframe>
+        
       </div>
       <div className="bg-[#222222]">
         <div className="container py-24 flex max-lg:flex-col max-lg:space-y-10 justify-between">

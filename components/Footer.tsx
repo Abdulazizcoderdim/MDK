@@ -49,12 +49,12 @@ const Footer = () => {
         <div className="space-y-3 text-[#b3b3b3]">
           <h2 className="text-xl font-bold text-white">Instagram</h2>
           <div className="grid grid-cols-3 gap-2">
-            <img className='max-sm:w-52 max-sm:h-40' src="/i1.jpg" alt="" />
-            <img className='max-sm:w-52 max-sm:h-40' src="/i2.jpg" alt="" />
-            <img className='max-sm:w-52 max-sm:h-40' src="/i3.jpg" alt="" />
-            <img className='max-sm:w-52 max-sm:h-40' src="/i4.jpg" alt="" />
-            <img className='max-sm:w-52 max-sm:h-40' src="/i5.jpg" alt="" />
-            <img className='max-sm:w-52 max-sm:h-40' src="/i6.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/instagram-1.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/instagram-2.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/instagram-3.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/instagram-4.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/instagram-5.jpg" alt="" />
+            <img className='max-sm:w-52 max-sm:h-40' src="/instagram-6.jpg" alt="" />
           </div>
         </div>
       </div>

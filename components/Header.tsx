@@ -67,12 +67,12 @@ const Header = () => {
             <li className="active:bg-redd px-7 py-2 cursor-pointer">
               <Link href={'/blog'}>Blog</Link>
             </li>
-            <li onClick={() => setSubMenu(prev=>!prev)} className="active:bg-redd px-7 py-2 cursor-pointer">
+            <li className="active:bg-redd px-7 py-2 cursor-pointer">
               <Link className="flex items-center" href={'/gallery'}>
                 Gallery <ChevronRight width={20} height={20} />
               </Link>
             </li>
-            {subMenu && (
+            {/* {subMenu && (
               <>
                 <li className="active:bg-redd px-10 py-2 cursor-pointer">
                   <Link href={'#'}>Haoh</Link>
@@ -87,7 +87,7 @@ const Header = () => {
                   <Link href={'#'}>Gomez</Link>
                 </li>
               </>
-            )}
+            )} */}
             <li className="active:bg-redd px-7 py-2 cursor-pointer">
               <Link href={'/contact'}>Contact</Link>
             </li>

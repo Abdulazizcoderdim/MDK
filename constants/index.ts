@@ -159,4 +159,20 @@ export const videos = [
     src: 'v11.mp4',
     category: 'MODEL',
   },
+  {
+    src: 'v8.mp4',
+    category: 'FASHION',
+  },
+  {
+    src: 'v9.mp4',
+    category: 'FASHION',
+  },
+  {
+    src: 'v10.mp4',
+    category: 'OTHER',
+  },
+  {
+    src: 'v11.mp4',
+    category: 'MODEL',
+  },
 ]

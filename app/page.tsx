@@ -50,7 +50,7 @@ export default function Home() {
         <div className="container py-24">
           <div >
             {/* 1-chi */}
-            <div data-aos="fade-down" className="md:flex flex-row justify-between md:space-x-10 max-md:space-y-10 items-center">
+            <div data-aos="fade-down" className="lg:flex flex-row justify-between lg:space-x-10 max-lg:space-y-10 items-center">
               <video
                 className="rounded-3xl"
                 src="/dva1.mp4"
@@ -380,7 +380,7 @@ export default function Home() {
             From Our Blog
           </h1>
         </div>
-        <div data-aos="fade-down" className="container flex gap-5 max-lg:flex-col justify-between">
+        <div data-aos="fade-down" className="container flex gap-5 max-lg:flex-col lg justify-between">
           <BlogPlace srcA="/author-1.jpg" srcB="/blog-1.jpg" />
           <BlogPlace srcA="/author-2.jpg" srcB="/blog-2.jpg" />
         </div>

@@ -2,15 +2,13 @@
 
 import LinkPage from '@/components/LinkPage'
 import PlacePage from '@/components/PlacePage'
-import { ourTeamAbout } from '@/constants'
-import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react'
-import { useEffect, useState } from 'react'
-import CountUp from 'react-countup'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
+import { useEffect } from 'react'
+import CountUp from 'react-countup'
 
 const AboutPage = () => {
-  const [team, setTeam] = useState<number | null>(null)
+  // const [team, setTeam] = useState<number | null>(null)
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -22,7 +20,10 @@ const AboutPage = () => {
       <LinkPage path="about" page="About Us" />
       <div className="bg-[#191919]">
         <div className="container py-24">
-          <div data-aos="fade-down" className="flex max-md:flex-col items-center gap-14 justify-between">
+          <div
+            data-aos="fade-down"
+            className="flex max-md:flex-col items-center gap-14 justify-between"
+          >
             <img src="/a.jpg" className="md:w-1/2" alt="" />
             <div className="space-y-4 md:w-1/2 text-white">
               <p className="text-redd text-sm font-bold">ABOUT US</p>
@@ -85,47 +86,39 @@ const AboutPage = () => {
           </div>
         </div>
         <div className="container text-center py-20">
-          <span data-aos="fade-down" className="text-[#e32879] text-sm font-bold">OUR TEAM</span>
-          <p data-aos="fade-down" className="text-[45px] text-white font-bold mb-10">
+          <span
+            data-aos="fade-down"
+            className="text-[#e32879] text-sm font-bold"
+          >
+            OUR TEAM
+          </span>
+          <p
+            data-aos="fade-down"
+            className="text-[45px] text-white font-bold mb-10"
+          >
             Top Designers
           </p>
-          <ul data-aos="fade-down" className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5">
-            {ourTeamAbout.map((item, index) => (
-              <li
-                onMouseEnter={() => setTeam(index)}
-                onMouseLeave={() => setTeam(null)}
-                className="text-white relative transition-all duration-300"
-                key={index}
-              >
-                <img className="" src={item.img} alt="" />
-                <div
-                  className={`md:space-y-8 space-y-2 text-center absolute top-5 left-5 bottom-5 right-5 ${
-                    team === index ? 'opacity-100' : 'opacity-0 scale-0'
-                  } transition-all duration-500 md:py-16 py-5 px-5 bg-[#191919]`}
-                >
-                  <p className="text-[#b3b3b3] font-normal text-base">
-                    {item.desc}
-                  </p>
-                  <h2 className="text-[22px] font-bold ">{item.name}</h2>
-                  <p className="text-redd text-xs">{item.position}</p>
-                  <div className="flex items-center gap-3 justify-center">
-                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
-                      <Facebook />
-                    </span>
-                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
-                      <Twitter />
-                    </span>
-                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
-                      <Instagram />
-                    </span>
-                    <span className="md:p-4 p-3 rounded-full bg-[#303030] cursor-pointer">
-                      <Youtube />
-                    </span>
-                  </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <div
+            data-aos="fade-down"
+            className="grid md:grid-cols-2 grid-cols-1 gap-5"
+          >
+            <div className="flex gap-5 flex-col">
+              <img src="/gallery-1.jpg" alt="" />
+              <div className="flex max-md:flex-col gap-5 items-center">
+                <img className='w-full' src="/gallery-6.jpg" alt="" />
+                <img className='w-full' src="/gallery-7.jpg" alt="" />
+              </div>
+            </div>
+            <div className="flex flex-col gap-5">
+              <div className="grid grid-cols-2 gap-5">
+                <img src="/gallery-2.jpg" alt="" />
+                <img src="/gallery-3.jpg" alt="" />
+                <img src="/gallery-4.jpg" alt="" />
+                <img src="/gallery-5.jpg" alt="" />
+              </div>
+              <img src="/gallery-8.jpg" alt="" />
+            </div>
+          </div>
         </div>
       </div>
 

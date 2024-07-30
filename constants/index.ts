@@ -61,37 +61,49 @@ export const ourTeam = [
 ]
 export const ourTeamAbout = [
   {
-    img: '/member-1.jpg',
+    img: '/gallery-1.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',
   },
   {
-    img: '/member-2.jpg',
+    img: '/gallery-2.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',
   },
   {
-    img: '/member-3.jpg',
+    img: '/gallery-3.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',
   },
   {
-    img: '/member-4.jpg',
+    img: '/gallery-4.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',
   },
   {
-    img: '/member-5.jpg',
+    img: '/gallery-5.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',
   },
   {
-    img: '/member-6.jpg',
+    img: '/gallery-6.jpg',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER',
+  },
+  {
+    img: '/gallery-7.jpg',
+    desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
+    name: 'Jacob Gomez',
+    position: 'DESIGNER',
+  },
+  {
+    img: '/gallery-8.jpg',
     desc: 'Quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
     name: 'Jacob Gomez',
     position: 'DESIGNER',

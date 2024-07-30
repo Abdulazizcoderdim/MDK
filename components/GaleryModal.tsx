@@ -21,7 +21,7 @@ const GaleryModal = ({ setModal, src }: ModalProps): JSX.Element => {
     >
       <div>
         <video
-          className="hover:scale-105 transition-all duration-200"
+          className="hover:scale-105 transition-all duration-200 w-96 h-96"
           src={src as string}
           autoPlay
           loop

@@ -59,7 +59,7 @@ const GalleryPage = () => {
               <div className="" key={index}>
                 <video
                   onClick={() => {setModal(true), setSrcM(src)}}
-                  className="hover:scale-105 transition-all duration-200"
+                  className="hover:scale-105 transition-all duration-200 w-full aspect-square"
                   src={src}
                   autoPlay
                   loop

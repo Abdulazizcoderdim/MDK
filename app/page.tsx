@@ -41,7 +41,7 @@ export default function Home() {
       <div className="relative flex items-center justify-center bg-red-300 ">
         <img
           title="finish"
-          className="fixed right-0 left-0 w-full h-screen object-cover origin-center -z-10 top-0 bottom-0"
+          className="fixed right-0 left-0 w-full h-screen object-cover origin-center -z-10 top-P0 bottom-0"
           src="/finish.gif"
         />
       </div>

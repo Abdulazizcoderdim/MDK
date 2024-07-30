@@ -99,9 +99,9 @@ const Header = () => {
       {pathname === '/' && (
         <div
           data-aos="fade-down"
-          className="flex items-center h-[100vh] bg-transparent text-white"
+          className="flex items-center justify-center h-[100vh] bg-transparent text-white"
         >
-          <div className="lg:ml-96 md:ml-52 sm:ml-5 ml-0 bg-[#AB4F81]/40 backdrop-blur-sm text-center rounded-xl w-96 min-h-96 py-5">
+          <div className=" bg-[#AB4F81]/40 backdrop-blur-sm text-center rounded-xl md:w-96 w-72 min-h-96 py-5">
             <h1 className="font-semibold">
               &quot;MOTION DESIGN KEEP PEOPLE WONDERING&quot;
             </h1>
